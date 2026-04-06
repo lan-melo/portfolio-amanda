@@ -4,10 +4,769 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Amanda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold text-center mt-10">Portfolio da Amanda</h1>
+  <body class="bg-white">
+
+    <!-- ====== HEADER / NAV ====== -->
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-border">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 text-xl font-bold text-primary">
+          <i class="fa-solid fa-briefcase"></i> Portfolio
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#resume" class="nav-link">Resume</a>
+        </nav>
+        <a href="#contact" class="hidden md:inline-flex btn-primary text-sm py-2.5 px-6">
+          Hire Me
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-dark text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-border px-6 py-4">
+        <nav class="flex flex-col gap-4">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#contact" class="btn-primary text-sm py-2.5 px-6 w-fit">Hire Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-white via-indigo-50/30 to-white">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-gray-text text-lg mb-2">Hello, I'm</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-3">
+            Amanda <span class="text-primary">Silva</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-text mb-2">
+            I'm a Professional <span class="text-primary font-semibold">Graphic Designer</span>
+          </p>
+          <p class="text-gray-text mb-8 max-w-md leading-relaxed">
+            Transformando ideias em experiências visuais incríveis. Especialista em design de interfaces, branding e identidade visual.
+          </p>
+          <div class="flex items-center gap-4 mb-8">
+            <a href="#contact" class="btn-primary">
+              Hire Me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#portfolio" class="btn-outline">
+              My Works
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/5 flex items-center justify-center text-dark/60 hover:bg-primary hover:text-white transition-all">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/5 flex items-center justify-center text-dark/60 hover:bg-primary hover:text-white transition-all">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/5 flex items-center justify-center text-dark/60 hover:bg-primary hover:text-white transition-all">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/5 flex items-center justify-center text-dark/60 hover:bg-primary hover:text-white transition-all">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary/10 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fa-solid fa-user text-primary/30 text-[120px] md:text-[160px]"></i>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-check text-primary"></i>
+            </div>
+            <div>
+              <p class="font-bold text-dark text-sm">5+ Anos</p>
+              <p class="text-gray-text text-xs">Experiência</p>
+            </div>
+          </div>
+          <div class="absolute -top-2 -right-2 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-star text-primary"></i>
+            </div>
+            <div>
+              <p class="font-bold text-dark text-sm">200+</p>
+              <p class="text-gray-text text-xs">Projetos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT SECTION ====== -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-subtitle">About Me</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">
+            Better design,<br>better experience
+          </h2>
+          <p class="text-gray-text leading-relaxed mb-4">
+            Sou designer gráfica e UI/UX com mais de 5 anos de experiência criando soluções digitais que encantam usuários e geram resultados.
+          </p>
+          <p class="text-gray-text leading-relaxed mb-8">
+            Acredito que o bom design vai além da estética — ele resolve problemas, comunica mensagens e cria conexões. Cada projeto é uma oportunidade de transformar ideias em realidade visual.
+          </p>
+          <a href="#contact" class="btn-primary">
+            Download CV <i class="fa-solid fa-download ml-1"></i>
+          </a>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-dark mb-6">Connect With Me</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="card text-center">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <i class="fa-brands fa-facebook-f text-primary text-xl"></i>
+              </div>
+              <p class="font-bold text-dark">5.4K</p>
+              <p class="text-gray-text text-sm">Followers</p>
+            </div>
+            <div class="card text-center">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <i class="fa-brands fa-twitter text-primary text-xl"></i>
+              </div>
+              <p class="font-bold text-dark">3.2K</p>
+              <p class="text-gray-text text-sm">Followers</p>
+            </div>
+            <div class="card text-center">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <i class="fa-brands fa-instagram text-primary text-xl"></i>
+              </div>
+              <p class="font-bold text-dark">8.1K</p>
+              <p class="text-gray-text text-sm">Followers</p>
+            </div>
+            <div class="card text-center">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <i class="fa-brands fa-linkedin-in text-primary text-xl"></i>
+              </div>
+              <p class="font-bold text-dark">2.8K</p>
+              <p class="text-gray-text text-sm">Followers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES SECTION ====== -->
+    <section id="services" class="py-20 bg-light-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">What I Do</p>
+          <h2 class="section-title">My Services</h2>
+          <p class="section-description">
+            Ofereço soluções completas em design para transformar suas ideias em produtos digitais de alta qualidade.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-magnifying-glass-chart text-primary text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-dark text-lg mb-2">User Research</h3>
+            <p class="text-gray-text text-sm leading-relaxed">
+              Pesquisa aprofundada para entender necessidades e comportamentos do usuário.
+            </p>
+          </div>
+          <div class="card text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-envelope-open-text text-primary text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-dark text-lg mb-2">Email Design</h3>
+            <p class="text-gray-text text-sm leading-relaxed">
+              Templates de email responsivos e atraentes que geram conversões.
+            </p>
+          </div>
+          <div class="card text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-flask-vial text-primary text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-dark text-lg mb-2">Live Testing</h3>
+            <p class="text-gray-text text-sm leading-relaxed">
+              Testes de usabilidade em tempo real para validar soluções de design.
+            </p>
+          </div>
+          <div class="card text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <i class="fa-solid fa-object-group text-primary text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-dark text-lg mb-2">Prototype</h3>
+            <p class="text-gray-text text-sm leading-relaxed">
+              Protótipos interativos de alta fidelidade para validação de conceitos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PORTFOLIO / RECENT WORKS ====== -->
+    <section id="portfolio" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">My Portfolio</p>
+          <h2 class="section-title">Recent Works</h2>
+          <p class="section-description">
+            Confira alguns dos meus trabalhos mais recentes e os resultados alcançados.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Project 1 -->
+          <div class="group relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end">
+              <div class="p-6 text-white">
+                <p class="text-sm opacity-80 mb-1">UI/UX Design</p>
+                <h3 class="text-xl font-bold">Startup Landing Page</h3>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-dark/10 flex items-center justify-center">
+              <i class="fa-solid fa-image text-dark/20 text-6xl"></i>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="group relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end">
+              <div class="p-6 text-white">
+                <p class="text-sm opacity-80 mb-1">Branding</p>
+                <h3 class="text-xl font-bold">Lab Poster Mockup Page</h3>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-dark/10 flex items-center justify-center -z-0">
+              <i class="fa-solid fa-image text-dark/20 text-6xl"></i>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="group relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end">
+              <div class="p-6 text-white">
+                <p class="text-sm opacity-80 mb-1">Web Design</p>
+                <h3 class="text-xl font-bold">Social Media Poster</h3>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-dark/10 flex items-center justify-center -z-0">
+              <i class="fa-solid fa-image text-dark/20 text-6xl"></i>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="group relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex items-end">
+              <div class="p-6 text-white">
+                <p class="text-sm opacity-80 mb-1">Mobile App</p>
+                <h3 class="text-xl font-bold">Business Card Mockup Page</h3>
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-dark/10 flex items-center justify-center -z-0">
+              <i class="fa-solid fa-image text-dark/20 text-6xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HAPPY CLIENTS / LOGOS ====== -->
+    <section class="py-16 bg-light-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="section-subtitle">Trusted By</p>
+          <h2 class="section-title">Some of My Happy Clients</h2>
+          <p class="section-description">
+            Empresas que confiaram no meu trabalho para elevar suas marcas e produtos.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-60">
+          <div class="flex items-center gap-2 text-2xl font-bold text-dark">
+            <i class="fa-solid fa-unlock-keyhole"></i> Unlock
+          </div>
+          <div class="flex items-center gap-2 text-2xl font-bold text-dark">
+            <i class="fa-solid fa-circle-info"></i> Infotech
+          </div>
+          <div class="flex items-center gap-2 text-2xl font-bold text-dark">
+            <i class="fa-brands fa-apple"></i> Apple.id
+          </div>
+          <div class="flex items-center gap-2 text-2xl font-bold text-dark">
+            <i class="fa-solid fa-database"></i> DataFlow
+          </div>
+          <div class="flex items-center gap-2 text-2xl font-bold text-dark">
+            <i class="fa-solid fa-bolt"></i> Zapier
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA SECTION ====== -->
+    <section class="py-16 bg-primary">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Want to work together and create amazing products with me?
+        </h2>
+        <p class="text-white/70 mb-8 max-w-xl mx-auto">
+          Vamos criar algo incrível juntos. Entre em contato e vamos discutir seu projeto.
+        </p>
+        <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2">
+          Let's Talk <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====== RESUME SECTION ====== -->
+    <section id="resume" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">Experience & Education</p>
+          <h2 class="section-title">My Resume</h2>
+          <p class="section-description">
+            Minha trajetória profissional e acadêmica no mundo do design.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <!-- Experience -->
+          <div>
+            <h3 class="text-xl font-bold text-dark mb-8 flex items-center gap-3">
+              <i class="fa-solid fa-briefcase text-primary"></i> Experience
+            </h3>
+            <div class="relative border-l-2 border-primary/20 pl-8 space-y-10">
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2022 - Present</span>
+                <h4 class="font-bold text-dark text-lg">UI/UX Designer</h4>
+                <p class="text-primary text-sm font-medium mb-1">Tech Company</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Responsável pelo design de produtos digitais, criando interfaces intuitivas e acessíveis.
+                </p>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2020 - 2022</span>
+                <h4 class="font-bold text-dark text-lg">Web Designer</h4>
+                <p class="text-primary text-sm font-medium mb-1">Creative Agency</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Desenvolvimento de websites responsivos e experiências digitais para diversas marcas.
+                </p>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2018 - 2020</span>
+                <h4 class="font-bold text-dark text-lg">Graphic Designer</h4>
+                <p class="text-primary text-sm font-medium mb-1">Design Studio</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Criação de identidades visuais, materiais impressos e designs para mídias sociais.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Education -->
+          <div>
+            <h3 class="text-xl font-bold text-dark mb-8 flex items-center gap-3">
+              <i class="fa-solid fa-graduation-cap text-primary"></i> Education
+            </h3>
+            <div class="relative border-l-2 border-primary/20 pl-8 space-y-10">
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2021 - 2022</span>
+                <h4 class="font-bold text-dark text-lg">Specialization Course</h4>
+                <p class="text-primary text-sm font-medium mb-1">UX Design Institute</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Especialização em design de experiência do usuário e pesquisa de usabilidade.
+                </p>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2017 - 2021</span>
+                <h4 class="font-bold text-dark text-lg">Bachelor in Design</h4>
+                <p class="text-primary text-sm font-medium mb-1">Universidade Federal</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Graduação em Design com foco em interfaces digitais e comunicação visual.
+                </p>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">2019</span>
+                <h4 class="font-bold text-dark text-lg">Updated Legacy</h4>
+                <p class="text-primary text-sm font-medium mb-1">Online Platform</p>
+                <p class="text-gray-text text-sm leading-relaxed">
+                  Certificação em design systems e metodologias ágeis aplicadas ao design.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PRICING SECTION ====== -->
+    <section id="pricing" class="py-20 bg-light-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">My Pricing</p>
+          <h2 class="section-title">My Pricing Plans</h2>
+          <p class="section-description">
+            Planos flexíveis para atender diferentes necessidades e orçamentos.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+          <!-- Gold -->
+          <div class="pricing-card">
+            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-cube text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-1">Gold Package</h3>
+            <p class="text-gray-text text-sm mb-6">Perfect for startups</p>
+            <ul class="text-left space-y-3 mb-8 text-sm text-gray-text">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> UI/UX Design
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> Web Development
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> 3 Revisions
+              </li>
+              <li class="flex items-center gap-2 opacity-40">
+                <i class="fa-solid fa-xmark"></i> Priority Support
+              </li>
+              <li class="flex items-center gap-2 opacity-40">
+                <i class="fa-solid fa-xmark"></i> Custom Illustrations
+              </li>
+            </ul>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold text-dark">$99</span>
+              <span class="text-gray-text">/project</span>
+            </div>
+            <a href="#contact" class="btn-outline w-full justify-center">Choose Plan</a>
+          </div>
+          <!-- Platinum (Featured) -->
+          <div class="pricing-card-featured">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-gem text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-1">Platinum Package</h3>
+            <p class="text-white/70 text-sm mb-6">Most Popular</p>
+            <ul class="text-left space-y-3 mb-8 text-sm text-white/80">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-white"></i> UI/UX Design
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-white"></i> Web Development
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-white"></i> Unlimited Revisions
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-white"></i> Priority Support
+              </li>
+              <li class="flex items-center gap-2 opacity-40">
+                <i class="fa-solid fa-xmark"></i> Custom Illustrations
+              </li>
+            </ul>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold text-white">$169</span>
+              <span class="text-white/70">/project</span>
+            </div>
+            <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2 w-full justify-center">
+              Choose Plan
+            </a>
+          </div>
+          <!-- Silver -->
+          <div class="pricing-card">
+            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-crown text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-1">Silver Package</h3>
+            <p class="text-gray-text text-sm mb-6">Enterprise Solution</p>
+            <ul class="text-left space-y-3 mb-8 text-sm text-gray-text">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> UI/UX Design
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> Web Development
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> Unlimited Revisions
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> Priority Support
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-primary"></i> Custom Illustrations
+              </li>
+            </ul>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold text-dark">$249</span>
+              <span class="text-gray-text">/project</span>
+            </div>
+            <a href="#contact" class="btn-outline w-full justify-center">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS SECTION ====== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">Testimonials</p>
+          <h2 class="section-title">Hear From My Clients</h2>
+          <p class="section-description">
+            O que meus clientes dizem sobre trabalhar comigo e os resultados alcançados.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="card">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-text text-sm leading-relaxed mb-6">
+              "Trabalhar com a Amanda foi uma experiência incrível. Ela entendeu perfeitamente nossa visão e entregou um design que superou todas as expectativas."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-user text-primary"></i>
+              </div>
+              <div>
+                <p class="font-bold text-dark text-sm">Lucas Pereira</p>
+                <p class="text-gray-text text-xs flex items-center gap-1">
+                  <i class="fa-brands fa-linkedin text-primary"></i> LinxCorp
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="card">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-gray-text text-sm leading-relaxed mb-6">
+              "Design excepcional e atenção aos detalhes. A Amanda transformou nosso app em uma experiência de usuário fluida e moderna. Recomendo muito!"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-user text-primary"></i>
+              </div>
+              <div>
+                <p class="font-bold text-dark text-sm">Maria Santos</p>
+                <p class="text-gray-text text-xs flex items-center gap-1">
+                  <i class="fa-brands fa-apple text-primary"></i> Apple.id
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="card">
+            <div class="flex items-center gap-1 text-yellow-400 mb-4">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="text-gray-text text-sm leading-relaxed mb-6">
+              "Profissional talentosa e dedicada. Entregou nosso projeto antes do prazo com uma qualidade impressionante. Já estamos planejando o próximo projeto juntos."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-user text-primary"></i>
+              </div>
+              <div>
+                <p class="font-bold text-dark text-sm">Carlos Oliveira</p>
+                <p class="text-gray-text text-xs flex items-center gap-1">
+                  <i class="fa-solid fa-unlock-keyhole text-primary"></i> Unlock
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BLOG SECTION ====== -->
+    <section class="py-20 bg-light-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">Latest Articles</p>
+          <h2 class="section-title">From The Blog</h2>
+          <p class="section-description">
+            Artigos, dicas e insights sobre design, criatividade e tecnologia.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div class="blog-card">
+            <div class="aspect-[16/10] bg-gray-100 flex items-center justify-center">
+              <i class="fa-solid fa-image text-dark/15 text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-xs text-gray-text mb-3">
+                <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> Mar 15, 2026</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-folder"></i> Design</span>
+              </div>
+              <h3 class="font-bold text-dark mb-2 hover:text-primary transition-colors cursor-pointer">
+                UX Design Trend 2026
+              </h3>
+              <p class="text-gray-text text-sm leading-relaxed">
+                As principais tendências de UX Design que vão dominar o mercado neste ano.
+              </p>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="blog-card">
+            <div class="aspect-[16/10] bg-gray-100 flex items-center justify-center">
+              <i class="fa-solid fa-image text-dark/15 text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-xs text-gray-text mb-3">
+                <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> Feb 28, 2026</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-folder"></i> Tips</span>
+              </div>
+              <h3 class="font-bold text-dark mb-2 hover:text-primary transition-colors cursor-pointer">
+                Tips for Workflow Design
+              </h3>
+              <p class="text-gray-text text-sm leading-relaxed">
+                Como otimizar seu fluxo de trabalho de design para máxima produtividade.
+              </p>
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div class="blog-card">
+            <div class="aspect-[16/10] bg-gray-100 flex items-center justify-center">
+              <i class="fa-solid fa-image text-dark/15 text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4 text-xs text-gray-text mb-3">
+                <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> Jan 10, 2026</span>
+                <span class="flex items-center gap-1"><i class="fa-regular fa-folder"></i> Creative</span>
+              </div>
+              <h3 class="font-bold text-dark mb-2 hover:text-primary transition-colors cursor-pointer">
+                Creative Workshop
+              </h3>
+              <p class="text-gray-text text-sm leading-relaxed">
+                Técnicas criativas para desbloquear sua inspiração e criar designs únicos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT SECTION ====== -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="section-subtitle">Get In Touch</p>
+          <h2 class="section-title">Have a Project in Mind?</h2>
+          <p class="section-description">
+            Preencha o formulário abaixo e entrarei em contato o mais rápido possível.
+          </p>
+        </div>
+        <form class="grid md:grid-cols-2 gap-5">
+          <input type="text" placeholder="Your Name" class="input-field" />
+          <input type="email" placeholder="Your Email" class="input-field" />
+          <input type="text" placeholder="Your Phone" class="input-field" />
+          <input type="text" placeholder="Subject" class="input-field" />
+          <textarea placeholder="Your Message" rows="5" class="input-field md:col-span-2 resize-none"></textarea>
+          <div class="md:col-span-2 text-center">
+            <button type="submit" class="btn-primary">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-dark text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- Col 1 - Let's Talk -->
+          <div class="md:col-span-1">
+            <h3 class="text-2xl font-bold mb-4">Let's Talk!</h3>
+            <div class="space-y-3 text-white/60 text-sm">
+              <p class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-primary"></i> amanda@email.com
+              </p>
+              <p class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-primary"></i> +55 11 99999-0000
+              </p>
+              <p class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-primary"></i> São Paulo, Brasil
+              </p>
+            </div>
+          </div>
+          <!-- Col 2 - Quero Sair -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-white/60 text-sm">
+              <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+              <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+              <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+              <li><a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a></li>
+            </ul>
+          </div>
+          <!-- Col 3 - More -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">More</h4>
+            <ul class="space-y-2 text-white/60 text-sm">
+              <li><a href="#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
+              <li><a href="#resume" class="hover:text-primary transition-colors">Resume</a></li>
+              <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="#" class="hover:text-primary transition-colors">Blog</a></li>
+            </ul>
+          </div>
+          <!-- Col 4 - Social -->
+          <div>
+            <h4 class="font-bold text-lg mb-4">Social Links</h4>
+            <div class="flex items-center gap-3">
+              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-6">
+        <p class="text-center text-white/40 text-sm">
+          &copy; 2026 Amanda Silva. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
