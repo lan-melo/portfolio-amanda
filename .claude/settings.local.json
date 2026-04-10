@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.figma.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git clone:*)",
+      "Bash(rm -f certificados.html index.html projetos.html)",
+      "Bash(rm -rf css js)",
+      "Bash(cp -r _temp_clone/.git .)",
+      "Bash(cp -r _temp_clone/* .)",
+      "Bash(rm -rf _temp_clone)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "Bash(npm list:*)",
+      "Bash(npm search:*)",
+      "WebSearch",
+      "WebFetch(domain:developers.figma.com)",
+      "Bash(claude mcp:*)"
+    ]
+  }
+}
