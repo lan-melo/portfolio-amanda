@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #4F46E5;
-  --color-primary-dark: #4338CA;
-  --color-primary-light: #6366F1;
+  --color-primary: #F8C600;
+  --color-primary-dark: #C69E00;
+  --color-primary-light: #FFD633;
   --color-dark: #1E293B;
   --color-gray-text: #64748B;
   --color-light-bg: #F8FAFC;
@@ -37,13 +37,13 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-8 py-3 rounded-full font-semibold
+    @apply bg-primary text-[#2D2D2D] px-8 py-3 rounded-full font-semibold
            hover:bg-primary-dark transition-all duration-300 inline-flex items-center gap-2;
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold
-           hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2;
+    @apply border-2 border-[#2D2D2D] text-[#2D2D2D] px-8 py-3 rounded-full font-semibold
+           hover:bg-primary hover:border-primary hover:text-[#2D2D2D] transition-all duration-300 inline-flex items-center gap-2;
   }
 
   .card {
