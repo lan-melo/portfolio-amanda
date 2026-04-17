@@ -4,6 +4,7 @@
   --color-primary: #F8C600;
   --color-primary-dark: #C69E00;
   --color-primary-light: #FFD633;
+  --color-primary-text: #9B7400;
   --color-dark: #1E293B;
   --color-gray-text: #64748B;
   --color-light-bg: #F8FAFC;
@@ -25,7 +26,7 @@
 
 @layer components {
   .section-subtitle {
-    @apply text-primary font-semibold text-sm uppercase tracking-widest mb-2;
+    @apply text-primary-text font-semibold text-sm uppercase tracking-widest mb-2;
   }
 
   .section-title {
